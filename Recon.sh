@@ -29,7 +29,22 @@ echo
 echo -e "\033[01;32m[+] ══════════ Por favor, informe o Host  ══════════ [+]\033[01;37m"
 echo -e "\033[01;32m[+] ══════════ Exemplo: www.google.com ══════════ [+]\033[01;37m"
 echo
-read -p 'Informe o Host: ' HOST 
+
+while [ "$HOST" == "" ]
+
+do            
+    read -p 'Informe o Host: ' HOST
+    
+    if [ "$HOST" != "" ];then
+    
+    echo 
+    
+    else
+        echo "Host vázio !"
+    
+    fi
+
+done   
 
 DIR=$HOST
 cd ~/Desktop
