@@ -14,6 +14,12 @@ echo
 
 sudo apt update -y
 
+echo
+echo -e "\033[01;32m[+] ══════════ Baixando e instalando GOLANG ══════════ [+]\033[01;37m"
+echo
+sudo apt install golang-go -y
+
+
 read -p 'Deseja configurar BOT do telegram ? S/N: ' bot
 
 if [ "$bot" == "S" ] || [ "$bot" == "s" ]; then
@@ -32,11 +38,6 @@ else
         
 fi
 
-echo
-echo -e "\033[01;32m[+] ══════════ Baixando e instalando GOLANG ══════════ [+]\033[01;37m"
-echo
-
-sudo apt install golang-go -y
 
 echo
 echo -e "\033[01;32m[+] ══════════ Baixando e instalando Python3 ══════════ [+]\033[01;37m"
