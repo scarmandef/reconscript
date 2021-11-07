@@ -49,35 +49,36 @@ echo
 echo -e "\033[01;32m[+] ══════════ Instalando Subfinder ══════════ [+]\033[01;37m"
 echo
 
-GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+go get -u -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
 
 echo
 echo -e "\033[01;32m[+] ══════════ Instalando Anew ══════════ [+]\033[01;37m"
 echo
 
-go get -u github.com/tomnomnom/anew
+go get -v -u github.com/tomnomnom/anew
 
 
 echo
 echo -e "\033[01;32m[+] ══════════ Instalando Httpx ══════════ [+]\033[01;37m"
 echo
 
-GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
+
+go get -u -vgithub.com/projectdiscovery/httpx/cmd/httpx
 
 
 echo
 echo -e "\033[01;32m[+] ══════════ Instalando Gau & GauPlus & Waybackurls ══════════ [+]\033[01;37m"
 echo
 
-GO111MODULE=on go get -u -v github.com/lc/gau
-GO111MODULE=on go get -u -v github.com/bp0lr/gauplus
-go get github.com/tomnomnom/waybackurls
+go get -u -v github.com/lc/gau
+go get -u -v github.com/bp0lr/gauplus
+go get -v -u github.com/tomnomnom/waybackurls
 
 echo
 echo -e "\033[01;32m[+] ══════════ Instalando Metabigor ══════════ [+]\033[01;37m"
 echo
 
-GO111MODULE=on go get github.com/j3ssie/metabigor
+go get -v -u github.com/j3ssie/metabigor
 
 echo
 echo -e "\033[01;32m[+] ══════════ Instalando Dirsearch ══════════ [+]\033[01;37m"
@@ -139,19 +140,19 @@ echo
 echo -e "\033[01;32m[+] ══════════ Instalando Unfurl ══════════ [+]\033[01;37m"
 echo
 
-go get -u github.com/tomnomnom/unfurl
+go get -v -ugithub.com/tomnomnom/unfurl
 
 echo
 echo -e "\033[01;32m[+] ══════════ Instalando Arjun ══════════ [+]\033[01;37m"
 echo
 
-go get github.com/hakluke/hakrevdns
+go get -v -u  github.com/hakluke/hakrevdns
 
 echo
 echo -e "\033[01;32m[+] ══════════ Instalando Dalfox ══════════ [+]\033[01;37m"
 echo
 
-GO111MODULE=on go get -v github.com/hahwul/dalfox/v2
+go get -v -u github.com/hahwul/dalfox/v2
 
 
 echo
