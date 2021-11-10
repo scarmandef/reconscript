@@ -1,7 +1,5 @@
 #           SCRIPT RECON BY SCARMANDEF                              
 		                                                                              
-# Créditos:  Cleyton S Santos & Sidkron CyberSecurity
-
 							
 							
 Antes de tudo, de permissão de execução tanto para o instalador (install.sh) quanto para o script (Recon.sh)		
@@ -11,18 +9,18 @@ Antes de tudo, de permissão de execução tanto para o instalador (install.sh) 
 
 Para os comandos do script funcionarem, cole as variaveis abaixo no final do .bashrc ou .zshrc dependendo da sua shell
 
+GoLang
 
-    export GOROOT=/home/user/.go
-    export PATH=$GOROOT/bin:$PATH
-    export GOPATH=/home/user/go
-    export PATH=$GOPATH/bin:$PATH
-    export GOROOT=/usr/local/go
-    export GOPATH=$HOME/go
-    export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH
-    export GOROOT=/usr/local/go
-    export GOPATH=$HOME/go
-    export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH
-    export PATH=$PATH:/usr/local/go/bin
+export GOROOT=/home/user/.go
+export PATH=$GOROOT/bin:$PATH
+export GOPATH=/home/user/go
+export PATH=$GOPATH/bin:$PATH
+
+Golang vars
+
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH
 
 
 
@@ -46,8 +44,3 @@ Comando:
    
    
    
-Site:  https://sidkron.com.br/
-
-Meu linkedin: https://www.linkedin.com/in/eduardo-alves-99003b205/
-
-Cleyton S Santos: https://www.linkedin.com/in/cleytonsidkron/
