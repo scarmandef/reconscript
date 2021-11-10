@@ -11,16 +11,16 @@ Para os comandos do script funcionarem, cole as variaveis abaixo no final do .ba
 
 GoLang
 
-export GOROOT=/home/user/.go
-export PATH=$GOROOT/bin:$PATH
-export GOPATH=/home/user/go
-export PATH=$GOPATH/bin:$PATH
+	export GOROOT=/home/user/.go
+	export PATH=$GOROOT/bin:$PATH
+	export GOPATH=/home/user/go
+	export PATH=$GOPATH/bin:$PATH
 
 Golang vars
 
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH
+	export GOROOT=/usr/local/go
+	export GOPATH=$HOME/go
+	export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH
 
 
 
