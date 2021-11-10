@@ -1,11 +1,14 @@
 #!/bin/bash
 
+
+
+
 echo
 echo -e "\033[01;33m[+] \033[01;31m ══════════ \033[01;32mComeçando instalação \033[01;31m ══════════ \033[01;33m[+]\033[01;37m"
 echo
 
-cd /opt/ && mkdir reconbb && cd reconbb
-sudo chmod 707 /opt/reconbb
+cd /opt/ && sudo mkdir tools_recon && cd tools_recon
+sudo chmod 777 /opt/tools_recon
 
 
 echo
@@ -13,12 +16,6 @@ echo -e "\033[01;33m[+] \033[01;31m ══════════ \033[01;32mCo
 echo
 
 sudo apt update -y
-
-echo
-echo -e "\033[01;32m[+] ══════════ Baixando e instalando GOLANG ══════════ [+]\033[01;37m"
-echo
-sudo apt install golang-go -y
-
 
 read -p 'Deseja configurar BOT do telegram ? S/N: ' bot
 
@@ -49,13 +46,13 @@ echo
 echo -e "\033[01;32m[+] ══════════ Instalando Subfinder ══════════ [+]\033[01;37m"
 echo
 
-go get -u -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 
 echo
 echo -e "\033[01;32m[+] ══════════ Instalando Anew ══════════ [+]\033[01;37m"
 echo
 
-go get -v -u github.com/tomnomnom/anew
+go install -v github.com/tomnomnom/anew@latest
 
 
 echo
@@ -63,31 +60,42 @@ echo -e "\033[01;32m[+] ══════════ Instalando Httpx ══�
 echo
 
 
-go get -u -vgithub.com/projectdiscovery/httpx/cmd/httpx
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 
 
 echo
 echo -e "\033[01;32m[+] ══════════ Instalando Gau & GauPlus & Waybackurls ══════════ [+]\033[01;37m"
 echo
 
-go get -u -v github.com/lc/gau
-go get -u -v github.com/bp0lr/gauplus
-go get -v -u github.com/tomnomnom/waybackurls
+go install -v github.com/lc/gau@latest
+go install -v github.com/bp0lr/gauplus@latest
+go install -v  github.com/tomnomnom/waybackurls@latest
 
 echo
 echo -e "\033[01;32m[+] ══════════ Instalando Metabigor ══════════ [+]\033[01;37m"
 echo
 
-go get -v -u github.com/j3ssie/metabigor
+go install -v github.com/j3ssie/metabigor@latest
 
 echo
 echo -e "\033[01;32m[+] ══════════ Instalando Dirsearch ══════════ [+]\033[01;37m"
 echo
 
 sudo git clone https://github.com/maurosoria/dirsearch.git
-sudo chmod 777 cd dirsearch
+sudo chmod 707 dirsearch
 cd dirsearch 
-sudo chmod 777 * 
+sudo chmod 707 * 
+pip3 install -r requirements.txt
+cd ..
+
+
+echo
+echo -e "\033[01;32m[+] ══════════ Instalando LinkFinder ══════════ [+]\033[01;37m"
+echo
+
+sudo git clone github.com/GerbenJavado/LinkFinder.git
+sudo chmod 707 LinkFinder
+cd LinkFinder
 pip3 install -r requirements.txt
 cd ..
 
@@ -101,7 +109,7 @@ echo
 echo -e "\033[01;32m[+] ══════════ Instalando GF ══════════ [+]\033[01;37m"
 echo
 
-go get -u github.com/tomnomnom/gf
+go install -v github.com/tomnomnom/gf@latest
 
 echo 'source $GOPATH/src/github.com/tomnomnom/gf/gf-completion.bash' >> ~/.bashrc
 echo 'source $GOPATH/src/github.com/tomnomnom/gf/gf-completion.bash' >> ~/.zshrc
@@ -114,23 +122,15 @@ echo
 
 sudo wget https://github.com/findomain/findomain/releases/latest/download/findomain-linux
 chmod +x findomain-linux
-mv findomain /usr/bin/
+sudo mv findomain /usr/bin/findomain
 
 
 echo
-echo -e "\033[01;32m[+] ══════════ Instalando Chaos ══════════ [+]\033[01;37m"
-echo
-
-GO111MODULE=on go get -v github.com/projectdiscovery/chaos-client/cmd/chaos
-echo "export CHAOS_KEY=5af78640cccc657746c68414b52cd7ba9ca9950248d290ea36de50249bd74899" >> ~/.zshrc 
-echo "export CHAOS_KEY=5af78640cccc657746c68414b52cd7ba9ca9950248d290ea36de50249bd74899" >> ~/.bashrc 
-
-
 echo
 echo -e "\033[01;32m[+] ══════════ Instalando ParamSpider ══════════ [+]\033[01;37m"
 echo
 
-sudo git clone https://github.com/devanshbatham/ParamSpider.git
+sudo git clone github.com/devanshbatham/ParamSpider.git
 
 cd ParamSpider
 pip3 install -r requirements.txt
@@ -140,25 +140,38 @@ echo
 echo -e "\033[01;32m[+] ══════════ Instalando Unfurl ══════════ [+]\033[01;37m"
 echo
 
-go get -v -ugithub.com/tomnomnom/unfurl
+go install -v  github.com/tomnomnom/unfurl@latest
 
 echo
 echo -e "\033[01;32m[+] ══════════ Instalando Arjun ══════════ [+]\033[01;37m"
 echo
 
-go get -v -u  github.com/hakluke/hakrevdns
+pip3 install arjun
+
+echo
+echo -e "\033[01;32m[+] ══════════ Instalando hakrevdns ══════════ [+]\033[01;37m"
+echo
+
+go install -v github.com/hakluke/hakrevdns@latest
 
 echo
 echo -e "\033[01;32m[+] ══════════ Instalando Dalfox ══════════ [+]\033[01;37m"
 echo
 
-go get -v -u github.com/hahwul/dalfox/v2
+go install -v github.com/hahwul/dalfox/v2@latest
 
 
 echo
+read -p "Tem Seclists Y/N ?/" seclists
+
+if [ "$seclists" == "S" ] || [ "$seclists" == "s" ]; then
+
 echo -e "\033[01;32m[+] ══════════ Baixando SecLists ══════════ [+]\033[01;37m"
-echo
 sudo git clone https://github.com/danielmiessler/SecLists.git
+
+else
+	echo "Ok"
+fi
 
 
 echo
